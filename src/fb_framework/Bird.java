@@ -1,9 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package fb_framework;
+
 import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.geom.AffineTransform;
 
+/**
+ *
+ * @author Zeno
+ */
 public class Bird {
-
     public int x;
     public int y;
     public int width;
@@ -54,7 +64,7 @@ public class Bird {
         r.y = y;
 
         if (image == null) {
-            image = Util.loadImage("lib/bird.png");     
+            image = Util.loadImage("assets/bird.png");     
         }
         r.image = image;
 

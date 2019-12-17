@@ -1,8 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package fb_framework;
+
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import flappybird.App;
 
+/**
+ *
+ * @author Zeno
+ */
 public class Game {
-
     public static final int PIPE_DELAY = 100;
 
     private Boolean paused;
@@ -61,10 +72,10 @@ public class Game {
 
     public ArrayList<Render> getRenders() {
         ArrayList<Render> renders = new ArrayList<Render>();
-        renders.add(new Render(0, 0, "lib/background.png"));
+        renders.add(new Render(0, 0, "assets/background.png"));
         for (Pipe pipe : pipes)
             renders.add(pipe.getRender());
-        renders.add(new Render(0, 0, "lib/foreground.png"));
+        renders.add(new Render(0, 0, "assets/foreground.png"));
         renders.add(bird.getRender());
         return renders;
     }

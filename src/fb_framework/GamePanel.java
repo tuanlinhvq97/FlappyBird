@@ -1,10 +1,20 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package fb_framework;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.*;
 
+/**
+ *
+ * @author Zeno
+ */
 public class GamePanel extends JPanel implements Runnable {
-
     private Game game;
 
     public GamePanel() {
@@ -17,6 +27,7 @@ public class GamePanel extends JPanel implements Runnable {
         repaint();
     }
 
+    @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
@@ -44,6 +55,7 @@ public class GamePanel extends JPanel implements Runnable {
         }
     }
 
+    @Override
     public void run() {
         try {
             while (true) {

@@ -1,7 +1,18 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package fb_framework;
+
 import java.awt.Image;
+import flappybird.App;
 
+/**
+ *
+ * @author Zeno
+ */
 public class Pipe {
-
     public int x;
     public int y;
     public int width;
@@ -32,11 +43,9 @@ public class Pipe {
     }
 
     public boolean collides(int _x, int _y, int _width, int _height) {
-
         int margin = 2;
 
         if (_x + _width - margin > x && _x + margin < x + width) {
-
             if (orientation.equals("south") && _y < y + height) {
                 return true;
             } else if (orientation.equals("north") && _y + _height > y) {
@@ -53,7 +62,7 @@ public class Pipe {
         r.y = y;
 
         if (image == null) {
-            image = Util.loadImage("lib/pipe-" + orientation + ".png");
+            image = Util.loadImage("assets/pipe-" + orientation + ".png");
         }
         r.image = image;
 
