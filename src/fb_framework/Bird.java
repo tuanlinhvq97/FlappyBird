@@ -34,7 +34,7 @@ public class Bird {
         x = 100;
         y = 150;
         yvel = 0;
-        width = 45;
+        width = 32;
         height = 32;
         gravity = 0.5;
         jumpDelay = 0;
